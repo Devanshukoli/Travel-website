@@ -1,0 +1,16 @@
+{
+  "name": "travel-website",
+  "version": "1.0.0",
+  "description": "Its's travel website for b2b or b2c customer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Travel",
+    "Travel-agency",
+    "Trips"
+  ],
+  "author": "Devanshukoli",
+  "license": "MIT"
+}
