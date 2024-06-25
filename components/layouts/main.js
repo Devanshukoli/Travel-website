@@ -1,36 +1,19 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
-import NavBar from '../navbar'
+import Navbar from '../navbar.js'
 import { Box, Container } from '@chakra-ui/react'
-import Footer from '../footer'
-import VoxelDogLoader from '../voxel-dog-loader'
 
 const Main = ({ children, router }) => {
   return (
     <Box as='main' pb={8}>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='description' content='Travel Website' />
-        <meta name="author" content='Devanshu Koli' />
-        <link rel='apple-touch-icon' href='apple-touch-icon.png' />
-        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
-        <meta name='twitter:title' content='Devanshu Koli' />
-        <meta name='twitter:site' content='@Devanshukoli' />
-        <meta name='twitter:creator' content='@Devanshukoli' />
-        <meta name='og:site_name' content='Devanshu Koli' />
-        <meta name='og:title' content='Devanshu Koli' />
-        <meta property='og:type' content='website' />
-        <title>Travel</title>
+        <title>Trips And Trade - Travel Website</title>
       </Head>
 
-      <NavBar path={router.asPath} />
+      <Navbar path={router.asPath} />
 
       <Container maxW='container.md' pt={14}>
-        <LazyVoxelDog />
-
           {children}
-          
-          <Footer />
       </Container>
     </Box>
   )
