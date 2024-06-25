@@ -1,4 +1,5 @@
 import NextLink from 'next/link';
+import Navbar from '../components/navbar';
 import { 
   Box,
   Heading,
@@ -11,6 +12,7 @@ import {
 const NotFound = () => {
   return (
     <Container>
+    <Navbar />
       <Heading as='h1'>Not Found</Heading>
       <Text>The page you&apos;re looking for was not found.</Text>
       <Divider my={6} />
