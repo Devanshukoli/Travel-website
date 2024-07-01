@@ -1,0 +1,43 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      a {
+        display: flex;
+        align-items: center;
+        padding: 10px 30px;
+        margin-right: 521px;
+        border-radius: 0.375rem;
+        background: #319795;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Not found :(</h1>
+      <p>The page you&apos;re looking for was not found</p>
+      <hr aria-orientation="horizontal" />
+      <div>
+        <a href="/">Return to Home</a>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

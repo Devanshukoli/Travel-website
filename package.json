@@ -1,35 +1,26 @@
 {
-  "name": "travel-website",
-  "version": "1.0.0",
-  "description": "Its's travel website for b2b or b2c customer.",
+  "name": "extra-ephemera",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "prettier": "prettier --write .",
-    "lint": "next lint",
-    "dev": "next dev -p 8080",
-    "start": "next start -p 8080 ",
-    "build": "next build"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prettier": "npx prettier . --write"
   },
-  "keywords": [
-    "Travel",
-    "Travel-agency",
-    "Trips"
-  ],
-  "author": "Devanshukoli",
-  "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/styled": "^11.11.5",
-    "framer-motion": "^11.2.10",
-    "next": "^14.2.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "three": "^0.165.0"
+    "@astrojs/mdx": "^3.1.1",
+    "@astrojs/rss": "^4.0.6",
+    "@astrojs/sitemap": "^3.1.6",
+    "astro": "^4.10.3",
+    "astro-icon": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.4",
-    "prettier": "^3.3.2"
+    "@types/node": "20.14.9",
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0",
+    "typescript": "5.5.2"
   }
 }

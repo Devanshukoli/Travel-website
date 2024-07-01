@@ -1,0 +1,63 @@
+---
+// src/pages/index.astro
+import Card from "../../../components/Card.astro";
+import BaseHead from "../../../components/BaseHead.astro";
+import Footer from "../../../components/Footer.astro";
+import Header from "../../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../../consts";
+import { getCollection } from "astro:content";
+
+const cards = await getCollection("Cardlayout");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+        <section>
+            <ul>
+                {
+
+                    <div class="card-container">
+                        <Card
+                        imageUrl="/images/almaty.jpg"
+                        location="PATTAYA"
+                        title="PATTAYA 4N/5D ITINERARY"
+                        duration="4 Nights 5 Days"
+                        availability="On Request"
+                        />
+                        <!-- Add more Card components as needed -->
+                    </div>
+                    // cards.map((card) => (
+                    //     <li>
+                    //         <div class="card-container">
+                    //             <Card
+                    //             imageUrl="/images/almaty.jpg"
+                    //             location="PATTAYA"
+                    //             title="PATTAYA 4N/5D ITINERARY"
+                    //             duration="4 Nights 5 Days"
+                    //             availability="On Request"
+                    //             />
+                    //             <!-- Add more Card components as needed -->
+                    //         </div>
+                    //     </li>
+                    // ))
+                }
+            </ul>
+        </section>
+    </main>
+    <Footer />
+  </body>
+</html>

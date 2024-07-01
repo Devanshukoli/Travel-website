@@ -1,0 +1,253 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+const { title, description, heroImage } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      main {
+        width: calc(100% - 2em);
+      }
+
+      .hero-image {
+        width: 100%;
+      }
+
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+      .contact-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3rem 1rem;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.875rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .info-box {
+        background-color: #f3f4f6;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .info-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .info-detail {
+        margin-top: 0.5rem;
+      }
+
+      .form-container {
+        background-color: #f3f4f6;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-label {
+        display: block;
+        color: #374151;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-input,
+      .form-select,
+      .form-textarea {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+      }
+
+      .submit-button {
+        background-color: #3b82f6;
+        color: white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-button:hover {
+        cursor: pointer;
+        background-color: #2563eb;
+      }
+
+      @media (min-width: 768px) {
+        .contact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 640px) {
+        .contact-container {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .contact-container {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <article>
+        <!-- Starting Page Image -->
+        <div class="hero-image">
+          {
+            heroImage && (
+              <img width={1020} height={510} src={heroImage} alt="" />
+            )
+          }
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 class="section-title">Contact Information</h2>
+              <div class="info-box">
+                <h3 class="info-title">Head Office</h3>
+                <p>
+                  Trips and Tools DMC UK Limited 85, Church Street, Leamington
+                  Spa, CV32 4PS, United Kingdom
+                </p>
+                <p class="info-detail">Phone: +44 7824079723, +44 8925890024</p>
+              </div>
+              <div class="info-box">
+                <h3 class="info-title">Thailand Branch</h3>
+                <p>
+                  Trips & Joy Co Ltd, 31/100, Arun-a Tha Soi II Moo 9,
+                  Banglamung, Chonburi 20150, Thailand
+                </p>
+                <p class="info-detail">Phone: +66 66004647, +66 7870038850</p>
+                <p class="info-detail">Fax number: +0 794 684 4800</p>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h2 class="section-title">Get in Touch</h2>
+              <form class="form-container">
+                <div class="form-group">
+                  <label class="form-label" for="company-name"
+                    >Company Name</label
+                  >
+                  <input
+                    class="form-input"
+                    id="company-name"
+                    type="text"
+                    placeholder="Company Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-person"
+                    >Full Name of Contact Person</label
+                  >
+                  <input
+                    class="form-input"
+                    id="contact-person"
+                    type="text"
+                    placeholder="Full Name of Contact Person"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone</label>
+                  <input
+                    class="form-input"
+                    id="phone"
+                    type="tel"
+                    placeholder="Phone number"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address</label>
+                  <input
+                    class="form-input"
+                    id="email"
+                    type="email"
+                    placeholder="Email Address"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="skype">Skype ID</label>
+                  <input
+                    class="form-input"
+                    id="skype"
+                    type="text"
+                    placeholder="Skype ID"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="country">Country</label>
+                  <select class="form-select" id="country">
+                    <option value="">Select Country</option>
+                    <!-- Add country options here -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="city">City</label>
+                  <select class="form-select" id="city">
+                    <option value="">Select City</option>
+                    <!-- Add city options here -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="subject">Subject</label>
+                  <input
+                    class="form-input"
+                    id="subject"
+                    type="text"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea
+                    class="form-textarea"
+                    id="message"
+                    rows="4"
+                    placeholder="Message"></textarea>
+                </div>
+                <button class="submit-button" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>
