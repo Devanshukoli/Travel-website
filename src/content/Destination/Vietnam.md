@@ -6,4 +6,6 @@ heroImage: "/public/Image/Vietnam/Veitnam_Main.jpg"
 
 Below are our **finest**, **meticulously** prepared *Ready Packages* for Vietnam.
 
-<p>here will come gray line for seperating things.</p>
+<hr />
+
+<p>Holiday Packages</p>
