@@ -1,7 +1,7 @@
 ---
 title: "Thailand"
 description: "This is page for Thailand Destination..."
-heroImage: "/public/Image/Thailand/thailand1.jpg"
+heroImage: "/src/assets/Image/Thailand/thailand1.jpg"
 ---
 
 Below are our **finest**, **meticulously** prepared *Ready Packages* for Thailand.

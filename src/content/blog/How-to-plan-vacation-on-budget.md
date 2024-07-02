@@ -2,7 +2,7 @@
 title: "How To Plan Vactaion On Budget"
 description: "This is blog for those who have less money to spent on travle. But stil enthusiastic about travelling..."
 pubDate: "March 13 2024"
-heroImage: "/public/blog/heroImage.jpg"
+heroImage: "/src/assets/blog/heroImage.jpg"
 blog: "./save-money-for-travel.md"
 ---
 

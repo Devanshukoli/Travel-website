@@ -2,7 +2,7 @@
 title: "Save Money For Travel"
 description: "This blog is for those who wants to save money for travel."
 pubDate: "March 23 2024"
-heroImage: "/public/blog/heroImage3.jpg"
+heroImage: "/src/assets/blog/heroImage3.jpg"
 ---
 
 ### Most Creative Ways To Save Money For Travel

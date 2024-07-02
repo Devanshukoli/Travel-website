@@ -1,7 +1,7 @@
 ---
 title: "Destinations"
 description: "This page showcases various destination that we do."
-heroImage: "/public/blog/heroImage6.jpg"
+heroImage: "/src/assets/blog/heroImage6.jpg"
 ---
 
 This is page for Thailand Destination...
