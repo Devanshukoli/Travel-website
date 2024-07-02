@@ -15,6 +15,6 @@ const dest = Astro.props;
 const { Content } = await dest.render();
 ---
 
-<DestinationCenter {...dest.data}>
+<cardLayout {...dest.data}>
   <Content />
-</DestinationCenter>
+</cardLayout>
