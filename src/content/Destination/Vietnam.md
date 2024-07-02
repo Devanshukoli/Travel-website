@@ -4,7 +4,7 @@ description: "This is page for Vietnam Destination..."
 heroImage: "/src/assets/Image/Vietnam/Veitnam_Main.jpg"
 ---
 
-Below are our **finest**, **meticulously** prepared *Ready Packages* for Vietnam.
+Below are our **finest**, **meticulously** prepared _Ready Packages_ for Vietnam.
 
 <hr />
 

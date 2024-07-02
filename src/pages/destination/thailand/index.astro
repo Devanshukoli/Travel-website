@@ -26,37 +26,37 @@ const cards = await getCollection("Cardlayout");
   <body>
     <Header />
     <main>
-        <section>
-            <ul>
-                {
-
-                    <div class="card-container">
-                        <Card
-                        imageUrl="/images/almaty.jpg"
-                        location="PATTAYA"
-                        title="PATTAYA 4N/5D ITINERARY"
-                        duration="4 Nights 5 Days"
-                        availability="On Request"
-                        />
-                        <!-- Add more Card components as needed -->
-                    </div>
-                    // cards.map((card) => (
-                    //     <li>
-                    //         <div class="card-container">
-                    //             <Card
-                    //             imageUrl="/images/almaty.jpg"
-                    //             location="PATTAYA"
-                    //             title="PATTAYA 4N/5D ITINERARY"
-                    //             duration="4 Nights 5 Days"
-                    //             availability="On Request"
-                    //             />
-                    //             <!-- Add more Card components as needed -->
-                    //         </div>
-                    //     </li>
-                    // ))
-                }
-            </ul>
-        </section>
+      <section>
+        <ul>
+          {
+            (
+              <div class="card-container">
+                <Card
+                  imageUrl="/images/almaty.jpg"
+                  location="PATTAYA"
+                  title="PATTAYA 4N/5D ITINERARY"
+                  duration="4 Nights 5 Days"
+                  availability="On Request"
+                />
+              </div>
+              // cards.map((card) => (
+              //     <li>
+              //         <div class="card-container">
+              //             <Card
+              //             imageUrl="/images/almaty.jpg"
+              //             location="PATTAYA"
+              //             title="PATTAYA 4N/5D ITINERARY"
+              //             duration="4 Nights 5 Days"
+              //             availability="On Request"
+              //             />
+              //             <!-- Add more Card components as needed -->
+              //         </div>
+              //     </li>
+              // ))
+            )
+          }
+        </ul>
+      </section>
     </main>
     <Footer />
   </body>
