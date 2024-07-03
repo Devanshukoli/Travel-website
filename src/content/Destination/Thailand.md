@@ -9,7 +9,7 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
 <p>here will come gray line for seperating things.</p>
 <h3>Holiday Packages</h3>
 
-<!-- Now here will come  -->
+<!-- Now here will come 
 <div class="card">
   <img src="path/to/pattaya-image.jpg" alt="Pattaya" class="card-image">
   <div class="card-content">
@@ -26,7 +26,7 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
       <span class="availability">On Demand</span>
     </div>
   </div>
-</div>
+</div> 
 
 <style>
   .card {
@@ -83,3 +83,6 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
     font-weight: bold;
   }
 </style>
+-->
+
+# Hello 

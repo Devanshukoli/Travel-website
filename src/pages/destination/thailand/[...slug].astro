@@ -9,12 +9,12 @@ export async function getStaticPaths() {
     props: card,
   }));
 }
-type Props = CollectionEntry<"Destination">;
+type Props = CollectionEntry<"Cardlayout">;
 
-const dest = Astro.props;
-const { Content } = await dest.render();
+const cards = Astro.props;
+const { Content } = await cards.render();
 ---
 
-<cardLayout {...dest.data}>
+<cardLayout {...cards.data}>
   <Content />
 </cardLayout>
