@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import CardLayouts from "../../../layouts/cardLayouts.astro";
+import Card from "../../../components/Card.astro";
 
 export async function getStaticPaths() {
   const cardlayouts = await getCollection("Cardlayout");
@@ -15,6 +15,6 @@ const cards = Astro.props;
 const { Content } = await cards.render();
 ---
 
-<CardLayouts {...cards.data}>
+<Card {...cards.data}>
   <Content />
-</CardLayouts>
+</Card>

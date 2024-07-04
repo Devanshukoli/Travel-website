@@ -4,11 +4,7 @@ import BaseHead from "../../../components/BaseHead.astro";
 import Footer from "../../../components/Footer.astro";
 import Header from "../../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../../consts";
-import { getCollection } from "astro:content";
 
-const dests = await getCollection("Destination");
-const card = await getCollection("Cardlayout");
-const {location, title, duration, availability } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,52 +18,6 @@ const {location, title, duration, availability } = Astro.props;
         gap: 16px;
         justify-content: center;
       }
-      .card {
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        overflow: hidden;
-        width: 300px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-        cursor: pointer;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-      }
-      .card-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .card-content {
-        padding: 16px;
-        background-color: aliceblue;
-      }
-      .location {
-        font-size: 14px;
-        color: #666;
-      }
-      .title {
-        font-size: 18px;
-        margin: 8px 0;
-      }
-      .details {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 14px;
-        color: #999;
-      }
-      .duration {
-        display: flex;
-        align-items: center;
-      }
-      .availability {
-        background-color: #007bff;
-        color: #fff;
-        padding: 2px 8px;
-        border-radius: 4px;
-      }
     </style>
   </head>
   <body>
@@ -76,60 +26,45 @@ const {location, title, duration, availability } = Astro.props;
       <section>
         <ul>
           {
-            // (
-            //   <div class="card-container">
-            //     <Card
-            //       imageUrl="/src/assets/Image/Thailand/thailand.jpg"
-            //       location="PATTAYA"
-            //       title="PATTAYA 4N/5D ITINERARY"
-            //       duration="4 Nights 5 Days"
-            //       availability="On Request"
-            //     />
-            //     <Card
-            //       imageUrl="/src/assets/Image/Thailand/thailand.jpg"
-            //       location="PATTAYA"
-            //       title="PATTAYA 4N/5D ITINERARY"
-            //       duration="4 Nights 5 Days"
-            //       availability="On Request"
-            //     />
-            //     <Card
-            //       imageUrl="/src/assets/Image/Thailand/thailand.jpg"
-            //       location="PATTAYA"
-            //       title="PATTAYA 4N/5D ITINERARY"
-            //       duration="4 Nights 5 Days"
-            //       availability="On Request"
-            //     />
-            //     <Card
-            //       imageUrl="/src/assets/Image/Thailand/thailand.jpg"
-            //       location="PATTAYA"
-            //       title="PATTAYA 4N/5D ITINERARY"
-            //       duration="4 Nights 5 Days"
-            //       availability="On Request"
-            //     />
-            //     <Card
-            //       imageUrl="/src/assets/Image/Thailand/thailand.jpg"
-            //       location="PATTAYA"
-            //       title="PATTAYA 4N/5D ITINERARY"
-            //       duration="4 Nights 5 Days"
-            //       availability="On Request"
-            //     />
-            //   </div>
-            // )
-            dests.map((card, dest) => (
-              <li>
-                <a href={`destination/${dest.slug}/${card.slug}/`}>
-                  <img src={card.data.heroImage} alt="" class="card-image" />
-                  <div class="card-content">
-                    <h2 class="location">{location}</h2>
-                    <h3 class="title">{title}</h3>
-                    <div class="details">
-                      <span class="duration">{duration}</span>
-                      <span class="availability">{availability}</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            ))
+            (
+              <div class="card-container">
+                <Card
+                  imageUrl="/src/assets/Image/Thailand/thailand.jpg"
+                  location="PATTAYA"
+                  title="PATTAYA 4N/5D ITINERARY"
+                  duration="4 Nights 5 Days"
+                  availability="On Request"
+                />
+                <Card
+                  imageUrl="/src/assets/Image/Thailand/thailand.jpg"
+                  location="PATTAYA"
+                  title="PATTAYA 4N/5D ITINERARY"
+                  duration="4 Nights 5 Days"
+                  availability="On Request"
+                />
+                <Card
+                  imageUrl="/src/assets/Image/Thailand/thailand.jpg"
+                  location="PATTAYA"
+                  title="PATTAYA 4N/5D ITINERARY"
+                  duration="4 Nights 5 Days"
+                  availability="On Request"
+                />
+                <Card
+                  imageUrl="/src/assets/Image/Thailand/thailand.jpg"
+                  location="PATTAYA"
+                  title="PATTAYA 4N/5D ITINERARY"
+                  duration="4 Nights 5 Days"
+                  availability="On Request"
+                />
+                <Card
+                  imageUrl="/src/assets/Image/Thailand/thailand.jpg"
+                  location="PATTAYA"
+                  title="PATTAYA 4N/5D ITINERARY"
+                  duration="4 Nights 5 Days"
+                  availability="On Request"
+                />
+              </div>
+            )
           }
         </ul>
       </section>
