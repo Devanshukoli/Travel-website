@@ -23,15 +23,26 @@ const { title, description, heroImage } = Astro.props;
     </style>
   </head>
   <body>
-    <div class="card-container">
-      <Card
-        imageUrl="/images/almaty.jpg"
-        location="ALMATY"
-        title="ALMATY 4N/5D ITINERARY"
-        duration="4 Nights 5 Days"
-        availability="On Demand"
-      />
-      <!-- Add more Card components as needed -->
-    </div>
+    <Header />
+    <main>
+      <article>
+        <div>
+          <!-- Here will go custom header, I guess 🤔 -->
+        </div>
+        <div class="prose">
+          <div class="card-container">
+            <Card
+              imageUrl="/images/almaty.jpg"
+              location="ALMATY"
+              title="ALMATY 4N/5D ITINERARY"
+              duration="4 Nights 5 Days"
+              availability="On Demand"
+            />
+            <!-- Add more Card components as needed -->
+          </div>
+        </div>
+      </article>
+      <Footer />
+    </main>
   </body>
 </html>

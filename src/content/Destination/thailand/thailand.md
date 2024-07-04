@@ -2,6 +2,7 @@
 title: "Thailand"
 description: "This is page for Thailand Destination..."
 heroImage: "/src/assets/Image/Thailand/thailand1.jpg"
+
 ---
 
 Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailand.
@@ -9,12 +10,11 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
 <p>here will come gray line for seperating things.</p>
 <h3>Holiday Packages</h3>
 
-<!-- Now here will come 
 <div class="card">
-  <img src="path/to/pattaya-image.jpg" alt="Pattaya" class="card-image">
+  <img src="/src/assets/Image/Thailand/thailand.jpg" alt="Pattaya" class="card-image">
   <div class="card-content">
     <div class="icon-container">
-      <img src="path/to/peak-icon.png" alt="Peak Icon" class="peak-icon">
+      <img src="/src/assets//favicons/peak-icon.png" alt="Peak Icon" class="peak-icon">
     </div>
     <h3 class="location">Pattaya</h3>
     <h2 class="itinerary-title">Pattaya 4N/5D ITINERARY</h2>
@@ -83,6 +83,5 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
     font-weight: bold;
   }
 </style>
--->
 
-# Hello 
+<!-- Below will come form for inquery :) -->
