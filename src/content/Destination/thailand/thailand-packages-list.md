@@ -4,13 +4,11 @@ description: "This is page for Thailand Destination..."
 heroImage: "/src/assets/Image/Thailand/thailand1.jpg"
 ---
 
-
 Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailand.
 
 #### Holiday Packages
 
-
-<!-- <div class="card">
+ <div class="card">
   <img src="/src/assets/Image/Thailand/thailand.jpg" alt="Pattaya" class="card-image">
   <div class="card-content">
     <div class="icon-container">
@@ -20,17 +18,17 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
     <h2 class="itinerary-title">Pattaya 4N/5D ITINERARY</h2>
     <div class="trip-details">
       <span class="duration">
-        <img src="path/to/clock-icon.png" alt="Clock Icon" class="clock-icon">
+        <img src="/src/assets/favicons/clock-icon.png" alt="Clock Icon" class="clock-icon">
         4 Nights 5 Days
       </span>
       <span class="availability">On Request</span>
     </div>
   </div>
-</div> 
+</div>
 
 <style>
   .card {
-    width: 300px;
+    width: 350px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -83,6 +81,4 @@ Below are our **finest**, **meticulously** prepared _Ready Packages_ for Thailan
     color: #4285f4;
     font-weight: bold;
   }
-</style> -->
-
-<!-- Below will come form for inquery :) -->
+</style> 
