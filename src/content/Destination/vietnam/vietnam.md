@@ -1,7 +1,7 @@
 ---
 title: "Vietnam"
 description: "This is page for Vietnam Destination..."
-heroImage: "/src/assets/Image/Vietnam/Veitnam_Main.jpg"
+heroImage: "/src/assets/public/static/Image/Vietnam/Veitnam_Main.jpg"
 alt: "Vietnam file"
 ---
 
