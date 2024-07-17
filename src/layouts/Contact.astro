@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import FormContainer from "../components/ui/Form.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
@@ -127,7 +128,6 @@ const { title, description, heroImage } = Astro.props;
     <Header />
     <main>
       <article>
-        <!-- Starting Page Image -->
         <div class="hero-image">
           {
             heroImage && (
@@ -214,15 +214,12 @@ const { title, description, heroImage } = Astro.props;
                   <label class="form-label" for="country">Country</label>
                   <select class="form-select" id="country">
                     <option value="">Select Country</option>
-                    <!-- Add country options here -->
                   </select>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="city">City</label>
                   <select class="form-select" id="city">
                     <option value="">Select City</option>
-                    <!-- Add city options here -->
-                  </select>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="subject">Subject</label>
