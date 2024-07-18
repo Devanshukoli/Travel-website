@@ -25,6 +25,6 @@ const destinationCollection = defineCollection({
 });
 
 export const collections = {
-  "blog": blogCollection,
-  "destination": destinationCollection
+  blog: blogCollection,
+  destination: destinationCollection,
 };
