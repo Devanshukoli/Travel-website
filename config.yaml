@@ -1,0 +1,29 @@
+site:
+  name: TripsAndTrade
+  site: 'https://tripsandtrade.vercel.app'
+  base: '/'
+  trailingSlash: false
+
+# Default SEO metadata
+metadata:
+  title:
+   default: TripsAndTrade
+   template: '%s - TripsAndTrade'
+  description: "\U0001F680 Suitable for Travel DMC, Medium Business, Large Business, Small Business, Sass Websites"
+  robots:
+   index: true
+   follow: true
+  openGraph:
+   site_name: TripsAndTrade
+   images:
+    - url: ''
+      width: 1200
+      height: 628
+  type: website
+  twitter:
+   handle: '@tripsandtrade'
+   site: '@tripsandtrade'
+   cardType: summary_large_image
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
