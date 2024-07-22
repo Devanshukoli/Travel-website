@@ -1,16 +1,94 @@
-import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import icon from "astro-icon";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// https://astro.build/config
+import { defineConfig, squooshImageService } from "astro/config";
+
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import mdx from '@astrojs/mdx';
+import partytown from '@astrojs/partytown'
+import icon from 'astro-icon';
+import compress from 'astro-compress';
+
+import astro from './vendor/integration';
+
+import {
+  readingTimeRemarkPlugin,
+  responsiveTablesRehypePlugin,
+  lazyImagesRehypePlugin,
+} from "./src/utils/frontmatter.mjs"
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const hasExternalScripts = false;
+const whenExternalScripts = (items = []) => hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
+
+
+
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://travel-website-nt0ljstfr-devanshukolis-projects.vercel.app/",
   integrations: [
-    mdx(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
     sitemap(),
+    mdx(),
     icon({
-      include: {},
+      include: {
+        tabler: ['*'],
+        'flat-color-icons': [
+          'template',
+          'gallery',
+          'approval',
+          'document',
+          'advertising',
+          'currency-exchange',
+          'voice-presentation',
+          'business-contact',
+          'database',
+        ]
+      },
+    }),
+
+    ...whenExternalScripts(() =>
+      partytown({
+        config: { forward: ['dataLayer.push'] },
+      })
+    ),
+
+    compress({
+      CSS: true,
+      HTML: {
+        'html-minifier-terser': {
+          removeAttributeQuotes: false,
+        },
+      },
+      Image: false,
+      JavaScript: true,
+      SVG: false,
+      Logger: 1,
+    }),
+
+    astro({
+      config: './src/config.yaml',
     }),
   ],
+
+  image: {
+    service: squooshImageService(),
+    domains: ['cdn.pixabay.com'],
+  },
+
+  markdown: {
+    remarkPlugins: [readingTimeRemarkPlugin],
+    rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
+  },
+
+  vite: {
+    resolve: {
+      alias: {
+        '~': path.resolve(__dirname, './src'),
+      }
+    }
+  }
 });
