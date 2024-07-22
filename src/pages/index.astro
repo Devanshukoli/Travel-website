@@ -1,64 +1,179 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Hero from "../components/widgets/Hero.astro";
+import Features2 from "../components/widgets/Features2.astro";
+import Layout from "../layouts/PageLayout.astro";
+
+const metadata = {
+  title: "Trips And Trade",
+};
 ---
 
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header />
     <main>
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
-      <p>
-        Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
-        template. This template serves as a lightweight, minimally-styled starting
-        point for anyone looking to build a personal website, blog, or portfolio
-        with Astro.
-      </p>
-      <p>
-        This template comes with a few integrations already configured in your
-        <code>astro.config.mjs</code> file. You can customize your setup with
-        <a href="https://astro.build/integrations">Astro Integrations</a> to add
-        tools like Tailwind, React, or Vue to your project.
-      </p>
-      <p>Here are a few ideas on how to get started with the template:</p>
-      <ul>
-        <li>Edit this page in <code>src/pages/index.astro</code></li>
-        <li>
-          Edit the site header items in <code>src/components/Header.astro</code>
-        </li>
-        <li>
-          Add your name to the footer in <code>src/components/Footer.astro</code
-          >
-        </li>
-        <li>
-          Check out the included blog posts in <code>src/content/blog/</code>
-        </li>
-        <li>
-          Customize the blog post page layout in <code
-            >src/layouts/BlogPost.astro</code
-          >
-        </li>
-      </ul>
-      <p>
-        Have fun! If you get stuck, remember to <a
-          href="https://docs.astro.build/"
-          >read the docs
-        </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask
-        questions.
-      </p>
-      <p>
-        Looking for a blog template with a bit more personality? Check out <a
-          href="https://github.com/Charca/astro-blog-template"
-          >astro-blog-template
-        </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
+      <Hero
+        tagline="Services"
+        title="Elevate your travel expereince with our wonderful and precise service."
+        subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
+        actions={[
+          {
+            variant: "primary",
+            target: "_blank",
+            text: "Start Exploring",
+            href: "/",
+          },
+        ]}
+        image={{
+          src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+          alt: "Tripsandtrade Hero Image",
+        }}
+      />
+
+      <Features2
+        title="Explore our diverse templates"
+        subtitle="Discover our selection below to streamline and elevate your projects."
+        columns={3}
+        items={[
+          {
+            title: "Educational",
+            description:
+              "By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.",
+            icon: "tabler:school",
+          },
+          {
+            title: "Interior Design",
+            description:
+              "Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.",
+            icon: "tabler:home-star",
+          },
+          {
+            title: "Photography",
+            description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+            icon: "tabler:photo",
+          },
+          {
+            title: "E-commerce",
+            description:
+              "Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.",
+            icon: "tabler:shopping-cart",
+          },
+          {
+            title: "Blog",
+            description:
+              "With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.",
+            icon: "tabler:article",
+          },
+          {
+            title: "Business",
+            description:
+              "Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.",
+            icon: "tabler:building-store",
+          },
+          {
+            title: "Branding",
+            description:
+              "Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.",
+            icon: "tabler:arrow-big-up-lines",
+          },
+          {
+            title: "Medical",
+            description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
+            icon: "tabler:vaccine",
+          },
+          {
+            title: "Fashion Design",
+            description:
+              "With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.",
+            icon: "tabler:tie",
+          },
+        ]}
+      />
     </main>
     <Footer />
   </body>
-</html>
+</html> -->
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Services"
+    title="Elevate your travel expereince with our wonderful and precise service."
+    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
+    actions={[
+      {
+        variant: "primary",
+        target: "_blank",
+        text: "Start Exploring",
+        href: "/",
+      },
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      alt: "Tripsandtrade Hero Image",
+    }}
+  />
+
+  <Features2
+    title="Explore our diverse templates"
+    subtitle="Discover our selection below to streamline and elevate your projects."
+    columns={3}
+    items={[
+      {
+        title: "Educational",
+        description:
+          "By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.",
+        icon: "tabler:school",
+      },
+      {
+        title: "Interior Design",
+        description:
+          "Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.",
+        icon: "tabler:home-star",
+      },
+      {
+        title: "Photography",
+        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+        icon: "tabler:photo",
+      },
+      {
+        title: "E-commerce",
+        description:
+          "Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.",
+        icon: "tabler:shopping-cart",
+      },
+      {
+        title: "Blog",
+        description:
+          "With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.",
+        icon: "tabler:article",
+      },
+      {
+        title: "Business",
+        description:
+          "Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.",
+        icon: "tabler:building-store",
+      },
+      {
+        title: "Branding",
+        description:
+          "Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.",
+        icon: "tabler:arrow-big-up-lines",
+      },
+      {
+        title: "Medical",
+        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
+        icon: "tabler:vaccine",
+      },
+      {
+        title: "Fashion Design",
+        description:
+          "With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.",
+        icon: "tabler:tie",
+      },
+    ]}
+  />
+</Layout>
