@@ -1,7 +1,9 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import typographyPlugin from '@tailwindcss/typography';
+/** @type {import('tailwindcss').Config} */
 
-module.exports = {
+import defaultTheme from 'tailwindcss/defaultTheme';
+import typeographyPlugin from '@tailwindcss/typography';
+
+export default {
   content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
@@ -16,9 +18,9 @@ module.exports = {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
-      },
+      }
     },
   },
-  plugins: [typographyPlugin],
+  plugins: [typeographyPlugin],
   darkMode: 'class',
 };
