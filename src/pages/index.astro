@@ -2,7 +2,7 @@
 import Hero from "../components/widgets/Hero.astro";
 import Features2 from "../components/widgets/Features2.astro";
 import Layout from "../layouts/PageLayout.astro";
-import Content from "../components/widgets/Content.astro"
+import Content from "../components/widgets/Content.astro";
 
 const metadata = {
   title: "Trips And Trade",
@@ -94,21 +94,21 @@ const metadata = {
     isReversed
     items={[
       {
-        title: "High-Quality Designs",
+        title: "High-Quality Quotes",
         description:
-          "Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.",
+          "Our Quotes feature top-tier inclusion that ensure a very unique tour for your experince to have.",
         icon: "tabler:wand",
       },
       {
-        title: "Customization Tools",
+        title: "Customization",
         description:
           "Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.",
         icon: "tabler:settings",
       },
       {
-        title: "Pre-Designed Elements",
+        title: "Pre-Designed Tours",
         description:
-          "Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.",
+          "Save time and effort with our ready-to-use tour packages, including hotels stay, attractions, and services that enhance the visual appeal of your tour.",
         icon: "tabler:presentation",
       },
       {
@@ -127,7 +127,49 @@ const metadata = {
       <h3
         class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
       >
-        Main Features
+        Main Services
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: "Time Savings",
+        description:
+          "We are the DMC Company that is fast at building quotes, Following up with it.",
+        icon: "tabler:clock",
+      },
+      {
+        title: "Professional Appearance",
+        description:
+          "Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.",
+        icon: "tabler:school",
+      },
+      {
+        title: "Cost-Efficiency",
+        description:
+          "Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.",
+        icon: "tabler:coin",
+      },
+      {
+        title: "Instant Download",
+        description:
+          "Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.",
+        icon: "tabler:file-download",
+      },
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      alt: "Benefits Image",
+    }}
+  >
+    <Fragment slot="content">
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Benefits
       </h3>
     </Fragment>
   </Content>
