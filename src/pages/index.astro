@@ -3,6 +3,7 @@ import Hero from "../components/widgets/Hero.astro";
 import Features2 from "../components/widgets/Features2.astro";
 import Layout from "../layouts/PageLayout.astro";
 import Content from "../components/widgets/Content.astro";
+import Testimonials from "../components/widgets/Testimonials.astro";
 
 const metadata = {
   title: "Trips And Trade",
@@ -173,4 +174,43 @@ const metadata = {
       </h3>
     </Fragment>
   </Content>
+
+  <Testimonials
+    title="Words from real customers"
+    testimonials={[
+      {
+        testimonial: `Our family vacation to Europe was flawlessly organized by Trips & Trade. From the moment we landed to our departure, every detail was meticulously planned. The accommodations were top-notch, and the guided tours were both informative and fun. We can’t wait to book our next adventure with them!`,
+        name: "Emily Kennedy",
+        job: "Director",
+        image: {
+          src: "https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80",
+          alt: "Emily Kennedy Image",
+        },
+      },
+      {
+        testimonial: `As a frequent business traveler, I rely on Trips & Trade for all my travel needs. Their team is incredibly responsive and always finds the best deals on flights and hotels. The convenience and peace of mind they provide are unmatched. Highly recommended!`,
+        name: "Sarah Hansen",
+        job: "Tour Manager",
+        image: {
+          src: "https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          alt: "Sarah Hansen Image",
+        },
+      },
+      {
+        testimonial: `I had to make a last-minute change to my travel plans, and the customer support team at Trips & Trade handled everything smoothly. Their professionalism and dedication to customer satisfaction are truly commendable. I’ll definitely be using their services again.`,
+        name: "Mark Wilkinson",
+        job: "Business owner",
+        image: {
+          src: "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80",
+          alt: "Mark Wilkinson Image",
+        },
+      },
+    ]}
+    callToAction={{
+      target: "_blank",
+      text: "More testimonials...",
+      href: "https://github.com/onwidget/astrowind",
+      icon: "tabler:chevron-right",
+    }}
+  />
 </Layout>
