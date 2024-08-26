@@ -31,7 +31,7 @@
     "@iconify-json/flat-color-icons": "^1.1.10",
     "@iconify-json/tabler": "^1.1.118",
     "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "20.14.9",
+    "@types/node": "22.5.0",
     "astro-compress": "^2.2.28",
     "cz-git": "^1.9.3",
     "globals": "^15.8.0",
